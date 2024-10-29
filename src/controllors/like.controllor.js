@@ -213,9 +213,6 @@ const getLikedVideos = asyncHandler(async (req, res) => {
             }
         },
         {
-            $unwind: "$video"
-        },
-        {
             $project: {
                 video: 1,
                 likedBy: 1,
